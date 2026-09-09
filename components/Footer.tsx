@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Code2, BriefcaseBusiness, Mail } from "lucide-react";
 
@@ -9,9 +10,17 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link
               href="/"
-              className="text-xl font-bold tracking-tight"
+              className="flex items-center gap-3"
+              aria-label="DB Logical Solutions home"
             >
-              DB Logical Solutions
+              <Image
+                src="/icon.png"
+                alt="DB Logical Solutions logo"
+                width={48}
+                height={48}
+                className="rounded-lg"
+              />
+              <span className="text-xl font-bold tracking-tight">DB Logical Solutions</span>
             </Link>
 
             <p className="mt-4 max-w-md leading-7 text-slate-400">
@@ -99,16 +108,9 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold">Products</h3>
 
-            <ul className="mt-4 space-y-3 text-sm text-slate-400">
-              <li>
-                <Link
-                  href="/products/materialflow"
-                  className="transition-colors hover:text-blue-400"
-                >
-                  MaterialFlow
-                </Link>
-              </li>
-            </ul>
+            <p className="mt-4 text-sm font-medium text-slate-400">
+              MaterialFlow
+            </p>
 
             <p className="mt-2 text-xs font-semibold uppercase tracking-wide text-blue-400">
               In Development
