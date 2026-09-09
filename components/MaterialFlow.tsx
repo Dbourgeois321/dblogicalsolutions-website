@@ -12,7 +12,7 @@ export default function MaterialFlow() {
   ];
 
   return (
-    <section className="bg-slate-950 text-white">
+    <section id="materialflow" className="bg-slate-950 text-white">
       <div className="mx-auto max-w-7xl px-6 py-16">
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
@@ -59,24 +59,17 @@ export default function MaterialFlow() {
                 );
               })}
             </div>
-
-            <a
-              href="/products/materialflow"
-              className="mt-8 inline-flex rounded-md bg-blue-600 px-5 py-3 font-semibold text-white hover:bg-blue-500"
-            >
-              Discover MaterialFlow
-            </a>
           </div>
 
-         <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-xl">
-  <Image
-    src="/images/materialflow-dashboard-v2.png"
-    alt="MaterialFlow manufacturing inventory and material management dashboard"
-    width={1536}
-    height={1024}
-    className="h-full w-full object-cover"
-  />
-</div>
+          <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-xl">
+            <Image
+              src="/images/materialflow-dashboard-v2.png"
+              alt="MaterialFlow manufacturing inventory and material management dashboard"
+              width={1536}
+              height={1024}
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
