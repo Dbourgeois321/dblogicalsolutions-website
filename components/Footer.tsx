@@ -10,10 +10,10 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link href="/" className="inline-flex" aria-label="DB Logical Solutions home">
               <Image
-                src="/images/db-logical-full-logo.jpg"
+                src="/images/db-logo-fixed.svg"
                 alt="DB Logical Solutions"
-                width={177}
-                height={150}
+                width={365}
+                height={310}
                 className="h-[105px] w-auto object-contain"
               />
             </Link>
