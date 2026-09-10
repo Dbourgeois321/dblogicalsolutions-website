@@ -7,10 +7,10 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
         <Link href="/" className="flex items-center" aria-label="DB Logical Solutions home">
           <Image
-            src="/images/db-logical-full-logo.jpg"
+            src="/images/db-logo-fixed.svg"
             alt="DB Logical Solutions"
-            width={177}
-            height={150}
+            width={365}
+            height={310}
             priority
             className="h-[68px] w-auto object-contain"
           />
