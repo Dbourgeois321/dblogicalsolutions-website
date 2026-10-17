@@ -1,8 +1,15 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceDetails from "@/components/ServiceDetails";
 import ServicePaths from "@/components/ServicePaths";
 import CTA from "@/components/CTA";
+
+export const metadata: Metadata = {
+  title: "Custom Software & Automation Services",
+  description:
+    "Custom applications, database solutions, workflow automation, reporting dashboards, and system integration built around the way your business actually operates.",
+};
 
 export default function ServicesPage() {
   return (

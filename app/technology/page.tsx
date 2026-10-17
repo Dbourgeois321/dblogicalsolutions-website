@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TechnologySystems from "@/components/TechnologySystems";
 import TechnologyApproach from "@/components/TechnologyApproach";
 import TechnologyDecision from "@/components/TechnologyDecision";
 import TechnologyCTA from "@/components/TechnologyCTA";
+
+export const metadata: Metadata = {
+  title: "Custom PCs, Workstations & Servers",
+  description:
+    "Business computers, engineering workstations, servers, storage, and custom-built systems selected and configured around the work they need to do, plus upgrades and hardware consulting.",
+};
 
 export default function TechnologyPage() {
   return (

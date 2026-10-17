@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ManufacturingCapabilities from "@/components/ManufacturingCapabilities";
@@ -5,6 +6,12 @@ import ManufacturingExperience from "@/components/ManufacturingExperience";
 import ManufacturingSystems from "@/components/ManufacturingSystems";
 import ManufacturingMaterialFlow from "@/components/ManufacturingMaterialFlow";
 import ManufacturingCTA from "@/components/ManufacturingCTA";
+
+export const metadata: Metadata = {
+  title: "Manufacturing Software & Inventory Systems",
+  description:
+    "Inventory, purchasing, production, warehouse, and material planning solutions for small manufacturers, designed around the shop floor and without the cost of a full ERP.",
+};
 
 export default function ManufacturingPage() {
   return (
