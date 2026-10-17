@@ -21,7 +21,7 @@ export default function Header() {
           <Link href="/services" className="text-sm font-medium text-slate-200 transition-colors hover:text-blue-400">Services</Link>
           <Link href="/manufacturing" className="text-sm font-medium text-slate-200 transition-colors hover:text-blue-400">Manufacturing</Link>
           <Link href="/technology" className="text-sm font-medium text-slate-200 transition-colors hover:text-blue-400">Technology</Link>
-          <Link href="/#materialflow" className="text-sm font-medium text-slate-200 transition-colors hover:text-blue-400">Products</Link>
+          <Link href="/products/materialflow" className="text-sm font-medium text-slate-200 transition-colors hover:text-blue-400">Products</Link>
           <Link href="/about" className="text-sm font-medium text-slate-200 transition-colors hover:text-blue-400">About</Link>
           <Link href="/contact" className="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-500">Discuss Your Project</Link>
         </nav>
