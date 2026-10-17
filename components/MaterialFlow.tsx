@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Boxes, ShoppingCart, ClipboardList, MapPin, BarChart3, Factory } from "lucide-react";
+import Link from "next/link";
+import { Boxes, ShoppingCart, ClipboardList, MapPin, BarChart3, Factory, ArrowRight } from "lucide-react";
 
 export default function MaterialFlow() {
   const features = [
@@ -59,6 +60,14 @@ export default function MaterialFlow() {
                 );
               })}
             </div>
+
+            <Link
+              href="/products/materialflow"
+              className="mt-8 inline-flex items-center gap-2 rounded-md bg-blue-600 px-5 py-3 font-semibold text-white transition hover:bg-blue-500"
+            >
+              Learn More About MaterialFlow
+              <ArrowRight size={18} />
+            </Link>
           </div>
 
           <div className="relative overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 shadow-xl">
