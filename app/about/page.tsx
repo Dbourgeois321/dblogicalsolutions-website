@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AboutExperience from "@/components/AboutExperience";
 import AboutProcess from "@/components/AboutProcess";
 import AboutWhy from "@/components/AboutWhy";
 import AboutCTA from "@/components/AboutCTA";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "DB Logical Solutions approaches technology from an operational perspective, drawing on manufacturing, inventory, purchasing, data, and software experience to solve the real problem first.",
+};
+
 export default function AboutPage() {
   return (
     <>

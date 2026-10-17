@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+
+export const metadata: Metadata = {
+  title: "Discuss Your Project",
+  description:
+    "Tell us what you are trying to improve. Describe the problem, process, or system, and we will recommend a practical next step. No obligation.",
+};
 
 export default function ContactPage() {
   return (
