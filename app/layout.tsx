@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Big_Shoulders_Display, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Barlow_Condensed, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const display = Big_Shoulders_Display({
+const display = Barlow_Condensed({
   variable: "--font-bs",
   subsets: ["latin"],
+  weight: ["700", "800"],
 });
 
 const sans = IBM_Plex_Sans({
