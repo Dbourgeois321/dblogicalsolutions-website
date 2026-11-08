@@ -75,10 +75,10 @@ export default function Footer() {
             <h2 className="display text-xl text-white">Reach me</h2>
             <p className="mt-4 text-sm leading-6">
               <a
-                href="mailto:info@dblogicalsolutions.com"
+                href="mailto:david@dblogicalsolutions.com"
                 className="font-medium text-white underline decoration-brand-bright decoration-2 underline-offset-4 hover:decoration-white"
               >
-                info@dblogicalsolutions.com
+                david@dblogicalsolutions.com
               </a>
               <br />
               Based in Massachusetts

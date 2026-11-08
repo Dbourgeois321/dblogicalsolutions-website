@@ -24,10 +24,10 @@ export default function CallToAction({
           <p className="mt-3 text-sm text-mute">
             Or email{" "}
             <a
-              href="mailto:info@dblogicalsolutions.com"
+              href="mailto:david@dblogicalsolutions.com"
               className="font-medium text-brand underline underline-offset-4 hover:text-brand-deep"
             >
-              info@dblogicalsolutions.com
+              david@dblogicalsolutions.com
             </a>
           </p>
         </div>

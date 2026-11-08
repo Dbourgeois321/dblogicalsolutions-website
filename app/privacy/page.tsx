@@ -210,10 +210,10 @@ export default function PrivacyPage() {
               <p className="mt-4">
                 Questions about this policy or your information? Email{" "}
                 <a
-                  href="mailto:info@dblogicalsolutions.com"
+                  href="mailto:david@dblogicalsolutions.com"
                   className="font-semibold text-brand underline underline-offset-4 hover:text-brand-deep"
                 >
-                  info@dblogicalsolutions.com
+                  david@dblogicalsolutions.com
                 </a>
                 .
               </p>

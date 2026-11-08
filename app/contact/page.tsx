@@ -43,10 +43,10 @@ export default function ContactPage() {
               <h2 className="display text-3xl">Prefer email?</h2>
               <p className="mt-2 leading-7 text-mute">
                 <a
-                  href="mailto:info@dblogicalsolutions.com"
+                  href="mailto:david@dblogicalsolutions.com"
                   className="font-semibold text-brand underline underline-offset-4 hover:text-brand-deep"
                 >
-                  info@dblogicalsolutions.com
+                  david@dblogicalsolutions.com
                 </a>
               </p>
             </div>
