@@ -1,26 +1,130 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  Design tokens.
+  Ink and the bright blue come straight from the logo tile (#020817 / #1677ff).
+  Red, amber, and green are used only as purchase-order statuses.
+  The pink and yellow are the carbon copies behind the hero form.
+*/
+@theme {
+  --color-ink: #020817;
+  --color-ink-2: #0c1a33;
+  --color-slip: #f3f5f7;
+  --color-sheet: #ffffff;
+  --color-rule: #c8d0da;
+  --color-mute: #475467;
+  --color-brand: #0b5bd3;
+  --color-brand-deep: #0847a8;
+  --color-brand-bright: #1677ff;
+  --color-late: #b42318;
+  --color-due: #8a5300;
+  --color-due-bg: #fcefc7;
+  --color-ok: #17784a;
+  --color-ok-bg: #ddf3e6;
+  --color-carbon-pink: #f4cdd3;
+  --color-carbon-yellow: #f7e48c;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-bs);
+  --font-sans: var(--font-plex);
+  --font-mono: var(--font-plex-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-slip);
+  color: var(--color-ink);
+  font-family: var(--font-plex), system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-brand-bright);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@layer components {
+  .wrap {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 72rem;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .wrap {
+      padding-inline: 1.5rem;
+    }
+  }
+
+  .display {
+    font-family: var(--font-bs), "Arial Narrow", Arial, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.005em;
+    line-height: 1;
+  }
+
+  .btn {
+    display: inline-flex;
+    min-height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    padding: 0.65rem 1.25rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    transition:
+      background-color 0.15s,
+      color 0.15s,
+      border-color 0.15s;
+  }
+
+  .btn-primary {
+    background: var(--color-brand);
+    color: #fff;
+  }
+
+  .btn-primary:hover {
+    background: var(--color-brand-deep);
+  }
+
+  .btn-light {
+    background: #fff;
+    color: var(--color-ink);
+  }
+
+  .btn-light:hover {
+    background: var(--color-carbon-yellow);
+  }
+
+  .btn-outline {
+    border: 2px solid currentColor;
+  }
+
+  .btn-outline:hover {
+    background: color-mix(in srgb, currentColor 10%, transparent);
+  }
+
+  .prose-block {
+    max-width: 62ch;
+  }
 }

@@ -1,30 +1,49 @@
 import Image from "next/image";
 import Link from "next/link";
+import MobileNav from "@/components/MobileNav";
+
+const links = [
+  { href: "/services", label: "Services" },
+  { href: "/products/materialflow", label: "MaterialFlow" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+];
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/95 text-white backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
-        <Link href="/" className="flex items-center" aria-label="DB Logical Solutions home">
+    <header className="sticky top-0 z-50 bg-ink text-white">
+      <div className="wrap flex items-center justify-between py-2">
+        <Link
+          href="/"
+          className="flex items-center"
+          aria-label="DB Logical Solutions home"
+        >
           <Image
             src="/images/db-logo-fixed.svg"
             alt="DB Logical Solutions"
             width={365}
             height={310}
             priority
-            className="h-[68px] w-auto object-contain"
+            className="h-16 w-auto object-contain"
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
-          <Link href="/" className="text-sm font-medium text-slate-200 transition-colors hover:text-blue-400">Home</Link>
-          <Link href="/services" className="text-sm font-medium text-slate-200 transition-colors hover:text-blue-400">Services</Link>
-          <Link href="/manufacturing" className="text-sm font-medium text-slate-200 transition-colors hover:text-blue-400">Manufacturing</Link>
-          <Link href="/technology" className="text-sm font-medium text-slate-200 transition-colors hover:text-blue-400">Technology</Link>
-          <Link href="/products/materialflow" className="text-sm font-medium text-slate-200 transition-colors hover:text-blue-400">Products</Link>
-          <Link href="/about" className="text-sm font-medium text-slate-200 transition-colors hover:text-blue-400">About</Link>
-          <Link href="/contact" className="rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-500">Discuss Your Project</Link>
+        <nav aria-label="Main" className="hidden items-center gap-8 md:flex">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-[15px] font-medium text-slate-200 transition-colors hover:text-white"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link href="/contact" className="btn btn-light">
+            Discuss a project
+          </Link>
         </nav>
+
+        <MobileNav links={links} />
       </div>
     </header>
   );
