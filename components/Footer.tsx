@@ -81,13 +81,15 @@ export default function Footer() {
                 david@dblogicalsolutions.com
               </a>
               <br />
-              Based in Massachusetts
+              DB Logical Solutions LLC
+              <br />
+              Fall River, Massachusetts
             </p>
           </div>
         </div>
 
         <p className="mt-12 border-t border-white/10 pt-6 text-sm text-slate-500">
-          © {new Date().getFullYear()} DB Logical Solutions
+          © {new Date().getFullYear()} DB Logical Solutions LLC
         </p>
       </div>
     </footer>

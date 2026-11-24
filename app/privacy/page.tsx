@@ -29,7 +29,8 @@ export default function PrivacyPage() {
                 Overview
               </h2>
               <p className="mt-4">
-                This policy applies to the DB Logical Solutions website at
+                This policy applies to the website of DB Logical Solutions
+                LLC, a Massachusetts limited liability company, at
                 dblogicalsolutions.com. We keep the amount of information we
                 collect small. We do not sell your personal information, and
                 we do not use advertising or marketing trackers on this site.

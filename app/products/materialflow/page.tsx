@@ -20,7 +20,30 @@ const firstRelease = [
   },
   {
     title: "Receiving into inventory",
-    text: "Receive against the purchase order and the material goes into inventory in the right location.",
+    text: "Receive against the purchase order, in full or in part, and the material goes into inventory in the right location.",
+  },
+  {
+    title: "Stock by location",
+    text: "Track material across receiving, raw stock, racks, and the floor, and move it between locations as it is used.",
+  },
+  {
+    title: "Full transaction history",
+    text: "Every receipt and transfer is recorded and tied back to its purchase order line, so you can see where material came from and where it went.",
+  },
+];
+
+const addOns = [
+  {
+    title: "Sales & Quoting",
+    text: "Build quotes from your own material costs and past jobs instead of a spreadsheet that only one person understands.",
+  },
+  {
+    title: "Manufacturing",
+    text: "Work orders, bills of materials, and lot or batch traceability, with job history saved to help price the next one.",
+  },
+  {
+    title: "Sales leads (CRM)",
+    text: "A shared list of leads so everyone can see who called whom and what each job involves.",
   },
 ];
 
@@ -92,22 +115,53 @@ export default function MaterialFlowPage() {
 
           <div>
             <h2 className="display text-[clamp(2rem,4.5vw,3.5rem)]">
-              Planned after the first release
+              Built in modules
             </h2>
             <p className="prose-block mt-6 text-lg leading-8 text-mute">
-              Manufacturing and scheduling: work orders, bills of materials,
-              and job history that helps with future quotes. Nothing here is
-              promised for a date, and what comes next will depend on what
-              shops tell me they need.
+              Purchasing and inventory is the core every shop starts with.
+              The modules below are planned as add-ons, so you only pay for
+              what your shop uses.
             </p>
           </div>
         </div>
       </section>
 
+      <section className="bg-sheet">
+        <div className="wrap py-16 md:py-24">
+          <div className="flex flex-wrap items-center gap-4">
+            <h2 className="display text-[clamp(2rem,4.5vw,3.5rem)]">
+              Coming next
+            </h2>
+            <span className="rounded-[2px] border border-brand px-2.5 py-1 text-sm font-medium text-brand">
+              Add-on modules
+            </span>
+          </div>
+
+          <ul className="mt-10 border-t-2 border-ink">
+            {addOns.map((item) => (
+              <li
+                key={item.title}
+                className="grid gap-3 border-b border-rule py-7 md:grid-cols-[minmax(0,22rem)_1fr] md:gap-12"
+              >
+                <h3 className="display text-3xl">{item.title}</h3>
+                <p className="prose-block text-lg leading-8 text-mute">
+                  {item.text}
+                </p>
+              </li>
+            ))}
+          </ul>
+
+          <p className="prose-block mt-8 text-mute">
+            Nothing here is promised for a date. What gets built first will
+            depend on what shops tell me they need.
+          </p>
+        </div>
+      </section>
+
       <CallToAction
-        title="Help shape what gets built"
-        text="If chasing suppliers and checking stock eats part of your week, tell me how it works today. It directly affects what MaterialFlow does."
-        button="Describe your purchasing process"
+        title="Request early access"
+        text="MaterialFlow's first release is close. If chasing suppliers and checking stock eats part of your week, get on the early access list and tell me how your shop buys today."
+        button="Request early access"
       />
     </>
   );
